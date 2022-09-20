@@ -1,3 +1,9 @@
+library(stringi)
+
+# A função "digitoCpf" calcula os digitos do CPF. O resultado é uma string(2).
+# O arqumento "strCpf9" deve receber os 9 primeiros digitos
+# do CPF em formato string.
+
 digitoCpf <- function(strCpf9){
   numbers_only <- function(x) !grepl("\\D", x)
   if ((nchar(strCpf9) != 9) | (!numbers_only(strCpf9))){return("--")}
